@@ -1,5 +1,9 @@
 <!--
     - class="btn-group": các <a> không có khoảng cách.
+    - form-control: bao vùng ngoài + boder + 1 ít padding. $ have me fill full size in div row
+    -  row justify-content-end: algin content in div GO TO LAST ROW.
+
+    @ col-form-label: a div little down but not change many different.
     ? role="group":
         @@ a,div cần role="button" bổ sung ngữ nghĩa CÒN button thì không cần
 -->
@@ -69,7 +73,7 @@
            <div class="col-12">
               <h3>Location Information</h3>
            </div>
-            <div class="col-12 col-sm-4 offset-sm-1">
+            <div class="col-12 col-sm-6 offset-sm-1">
                    <h5>Our Address</h5>
                     <address style="font-size: 100%">
 		              121, Clear Water Bay Road<br>
@@ -81,7 +85,7 @@
                         <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
             </div>
-            <div class="col-12 col-sm-6 offset-sm-1">
+            <div class="col-12 col-sm-4 offset-sm-1">
                 <h5>Map of our Location</h5>
             </div>
             <div class="col-12 col-sm-11 offset-sm-1">
@@ -97,8 +101,75 @@
            <div class="col-12">
               <h3>Send us your Feedback</h3>
            </div>
-            <div class="col-12 col-md-9">
-                Form goes here
+            <div class="col-12 col-md-12">
+                <form>
+                    <div class="form-group row">
+                        <label for="firstname" class="col-3 col-md-3 col-form-label">First Name</label>
+                        <div class="col-9 col-md-9">
+                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="lastname" class="col-3 col-md-3 col-form-label">Last Name</label>
+                        <div class="col-9 col-md-9">
+                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="phone" class="col-3 col-md-3 col-form-label">Contact Tel.</label>
+                       
+                        <div class="col-3 col-md-4">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Tel Phone">
+                        </div>
+                        <div class="col col-md">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Tel Phone">
+                        </div>
+                      
+                    </div>
+                    
+                    <!--col-3 col: tự động-->
+                    <div class="form-group row">
+                        <label for="email" class="col-3 col-md-3 col-form-label">Email</label>
+                        <div class="col col-md">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-6 offset-md-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="approve" id="approve" value="">
+                                <label class="form-check-label" for="approve">
+                                    <strong>May we contact you?</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>Tel.</option>
+                                <option>Email</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Feedback" class="col-12 col-md-12 col-form-label">Feedback: </label>
+                        <div class="col col-md-9 offset-md-3">
+                            <textarea class="form-control" id="Feedback" name="Feedback" rows="8" placeholder="Feed Back ..."></textarea></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row justify-content-end">
+                        <div class="col-12 col-sm-4 col-md-3">
+                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+                        </div>
+                    </div>
+
+                    
+                </form>
+
+
             </div>
              <div class="col-12 col-md">
             </div>
